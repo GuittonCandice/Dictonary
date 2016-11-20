@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		32F461B51DD8F1B60038868F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F461B41DD8F1B60038868F /* main.c */; };
 		32F461BD1DD8F1D30038868F /* LinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F461BB1DD8F1D30038868F /* LinkedList.c */; };
+		32F461C01DE0AF5C0038868F /* LinkedListFileHandler.c in Sources */ = {isa = PBXBuildFile; fileRef = 32F461BE1DE0AF5C0038868F /* LinkedListFileHandler.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		32F461B41DD8F1B60038868F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		32F461BB1DD8F1D30038868F /* LinkedList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinkedList.c; sourceTree = "<group>"; };
 		32F461BC1DD8F1D30038868F /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		32F461BE1DE0AF5C0038868F /* LinkedListFileHandler.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinkedListFileHandler.c; sourceTree = "<group>"; };
+		32F461BF1DE0AF5C0038868F /* LinkedListFileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedListFileHandler.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				32F461B41DD8F1B60038868F /* main.c */,
+				32F461BE1DE0AF5C0038868F /* LinkedListFileHandler.c */,
+				32F461BF1DE0AF5C0038868F /* LinkedListFileHandler.h */,
 				32F461BB1DD8F1D30038868F /* LinkedList.c */,
 				32F461BC1DD8F1D30038868F /* LinkedList.h */,
 			);
@@ -125,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32F461B51DD8F1B60038868F /* main.c in Sources */,
+				32F461C01DE0AF5C0038868F /* LinkedListFileHandler.c in Sources */,
 				32F461BD1DD8F1D30038868F /* LinkedList.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +258,7 @@
 				32F461BA1DD8F1B60038868F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

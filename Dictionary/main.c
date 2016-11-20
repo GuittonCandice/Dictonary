@@ -8,8 +8,11 @@
 
 #include <stdio.h>
 #include "LinkedList.h"
+#include "LinkedListFileHandler.h"
 
 int main(int argc, const char * argv[]) {
+
+    
     LinkedList* ll = LinkedListNewElement("Bonjour");
     
     LinkedListAppend(&ll, "Monamour");
@@ -22,6 +25,12 @@ int main(int argc, const char * argv[]) {
     LinkedListPrint(ll);
     printf("%d", LinkedListSize(ll));
     printf("\n%d ",LinkedListContains(ll, "Bruno"));
+    
+    
+    LinkedListWriteToFile(ll, "/Users/candice/Desktop/dic1.txt");
+
+    LinkedList* ll2 = LinkedListReadFromFile("/Users/candice/Desktop/dic1.txt");
+    LinkedListPrint(ll2);
     
     return 0;
 }
