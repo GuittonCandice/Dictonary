@@ -22,15 +22,28 @@ int main(int argc, const char * argv[]) {
     LinkedListAppend(&ll, "Hippopotame");
     LinkedListAppend(&ll, "Benoit");
     
-    LinkedListPrint(ll);
-    printf("%d", LinkedListSize(ll));
-    printf("\n%d ",LinkedListContains(ll, "Bruno"));
+   // LinkedListPrint(ll);
+  //  printf("%d", LinkedListSize(ll));
+   // printf("\n%d ",LinkedListContains(ll, "Bruno"));
     
     
     LinkedListWriteToFile(ll, "/Users/candice/Desktop/dic1.txt");
 
-    LinkedList* ll2 = LinkedListReadFromFile("/Users/candice/Desktop/dic1.txt");
-    LinkedListPrint(ll2);
+    LinkedList* ll2 = LinkedListReadFromFile("/Users/candice/Desktop/lorem.txt");
+    LinkedListWriteToFile(ll2, "/Users/candice/Desktop/dic2.txt");
+    
+    
+    char* string = "bonjour les petits chats";
+    int i=0, cpt = 0;
+
+    while(string[i] != '\0') {
+        if(string[i] == ' '){
+            cpt++;
+        }
+        i++;
+    }
+   // printf("%d", cpt);
+    
     
     return 0;
 }
