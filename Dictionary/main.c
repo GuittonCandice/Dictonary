@@ -15,7 +15,6 @@ int main(int argc, const char * argv[]) {
     
     LinkedList* ll = LinkedListNewElement("Bonjour");
     
-    LinkedListAppend(&ll, "Monamour");
     LinkedListAppend(&ll, "Abou");
     LinkedListAppend(&ll, "Candice");
     LinkedListAppend(&ll, "Zebre");
