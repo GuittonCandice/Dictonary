@@ -52,10 +52,7 @@ LinkedList* LinkedListReadFromFile(char* path) {
             i++;
         } else if(i > 0){
             buffer[i] = '\0';
-            char* value = malloc(sizeof(char)*(i+1));
-            
-            strcpy(value, buffer);
-            LinkedListAppend(&ll, value);
+            LinkedListAppend(&ll, buffer);
             i = 0;
         }
         

@@ -9,10 +9,14 @@
 #include <stdio.h>
 #include "LinkedList.h"
 #include "LinkedListFileHandler.h"
+#include "Menu.h"
+
+
+
 
 int main(int argc, const char * argv[]) {
 
-    
+/*
     LinkedList* ll = LinkedListNewElement("Bonjour");
     
     LinkedListAppend(&ll, "Abou");
@@ -43,6 +47,8 @@ int main(int argc, const char * argv[]) {
     }
    // printf("%d", cpt);
     
+    */
+    displayHomeMenu();
     
     return 0;
 }

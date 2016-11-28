@@ -13,14 +13,16 @@
 
 LinkedList* LinkedListNewElement(char* word){
     LinkedList* ll = malloc(sizeof(LinkedList));
-
-    ll->val = word;
+    char* value = malloc(sizeof(char)*strlen(word));
+    strcpy(value, word);
+    ll->val = value;
     ll->next = NULL;
     
     return ll;
 }
 
 LinkedList* LinkedListAppend(LinkedList** head, char* word){
+    
     LinkedList* previous = NULL;
     LinkedList* ll;
     LinkedList* current = *head;
