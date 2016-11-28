@@ -19,14 +19,35 @@ struct LinkedList {
 };
 typedef struct LinkedList LinkedList;
 
+/** function to create LinkedList
+ * @param word word to add
+ * @return head of LinkedList
+ **/
 LinkedList* LinkedListNewElement(char* word);
 
+/** function to add a word in LinkedList
+ * @param head dictionary
+ * @param word new word
+ * @return LinkedList with the added word
+ **/
 LinkedList* LinkedListAppend(LinkedList** head, char* word);
 
+/** function to display the entire dictionary
+ * @param head Dictionary
+ **/
 void LinkedListPrint(LinkedList* head);
 
+/** function to count the size of the linkedlist
+ * @param head Dictionary
+ * @return number of link
+ **/
 int LinkedListSize(LinkedList* head);
 
+/** function to verify if a word exists in dictionary
+ * @param head Dictionary
+ * @param word word to find
+ * @return int 1 if yes 0 if no
+ **/
 int LinkedListContains(LinkedList* head, char* word);
 
 

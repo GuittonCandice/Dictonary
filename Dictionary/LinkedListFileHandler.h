@@ -14,9 +14,19 @@
 #include <stdlib.h>
 #include "LinkedList.h"
 
-int LinkedListWriteToFile(LinkedList*, char*);
+/** function to write words in file
+ * @param ll Dictionary
+ * @param path path of the file
+ * @return int 1 if ok 0 if not
+ **/
 
-LinkedList* LinkedListReadFromFile(char*);
+int LinkedListWriteToFile(LinkedList* ll, char* path);
+
+/** function to read from file
+ * @param path Dictionary
+ * @return LinkedList of words
+ **/
+LinkedList* LinkedListReadFromFile(char* path);
 
 
 #endif /* LinkedListFileHandler_h */
