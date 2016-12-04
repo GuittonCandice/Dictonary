@@ -1,16 +1,18 @@
 //
-//  Menu.c
+//  menu_gestbib.h
 //  Dictionary
 //
 //  Created by Candice on 27/11/2016.
 //  Copyright © 2016 Candice. All rights reserved.
 //
 
-#include "Menu.h"
+#include "menu_gestbib.h"
 
 
-void displayHomeMenu(){
+void displayHomeMenuGestBib(){
     int choice = 0;
+
+    do {
     printf("Projet C : Dictionnaire Partie 1\n1/ Créer un dictionnaire \n2/ Utiliser un dictionnaire existant \n3/ Fabriquer un dictionnaire à partir d'un fichier existant \n4/ Inserer un mot dans le dictionnaire \n5/ Rechercher un mot dans un dictionnaire \n6/ Détruire un fichier dictionnaire\n");
     scanf("%d", &choice);
     switch (choice) {
@@ -35,12 +37,12 @@ void displayHomeMenu(){
         default:
             break;
     }
-    
+    } while (choice != 0);
 }
 
 void createDictionaryMenu() {
     char word[255];
-    printf("Pour créer un dictionnaire, saisissez un mot et faites entrée autant de fois que nécessaire\n");
+    printf("Pour créer un dictionnaire, saisissez un mot et faites entrée autant de fois que nécessaire, faites 0 pour arrêter\n");
     LinkedList* ll = NULL;
     do {
         
@@ -57,19 +59,33 @@ void createDictionaryMenu() {
     
 }
 
-void chooseDictionaryMenu(){
+LinkedList* chooseDictionaryMenu(){
     char path[255];
+    int choice;
     printf("Saisissez le chemin du dictionnaire que vous voulez utiliser\n");
     scanf("%s", path);
-    LinkedListPrint(LinkedListReadFromFile(path));
-    
+    LinkedList* ll = LinkedListReadFromFile(path);
+    printf("Voulez vous afficher ce dictionnaire ? 1 pour oui, 0 pour non \n");
+    scanf("%d", &choice);
+    if(choice == 1) {
+        LinkedListPrint(ll);
+        printf("\n");
+    } else {
+        return ll;
+    }
+    return ll;
 }
 
 void buildDictionaryMenu(){
     char path[255];
+    char path2[255];
     printf("Saisissez le chemin du fichier texte que vous voulez utiliser\n");
     scanf("%s", path);
-    LinkedListPrint(LinkedListReadFromFile(path));
+    LinkedList* ll = NULL;
+    ll = LinkedListReadFromFile(path);
+    printf("Saisissez l'endroit ou vous voulez placer le dictionnaire créé\n");
+    scanf("%s", path2);
+    LinkedListWriteToFile(ll, path2);
 }
 
 void insertInDictionaryMenu(){
@@ -80,8 +96,14 @@ void insertInDictionaryMenu(){
     printf("Saisissez le mot\n");
     scanf("%s", word);
     LinkedList* ll = LinkedListReadFromFile(path);
-    LinkedListAppend(&ll, word);
-    LinkedListPrint(ll);
+    if(LinkedListAppend(&ll, word) == NULL) {
+        printf("Echec de l'insertion\n\n");
+    }else {
+        printf("Votre mot a bien été inséré\n\n");
+        LinkedListWriteToFile(ll, path);
+        LinkedListPrint(ll);
+
+    };
     
 }
 
@@ -94,9 +116,9 @@ void searchInDictionaryMenu(){
     scanf("%s", word);
     LinkedList* ll = LinkedListReadFromFile(path);
     if(LinkedListContains(ll, word) == 1) {
-        printf("Le dictionnaire contient le mot \"%s\"", word);
+        printf("Le dictionnaire contient le mot \"%s\" \n\n", word);
     } else {
-        printf("Le dictionnaire ne contient pas le mot \"%s\"", word);
+        printf("Le dictionnaire ne contient pas le mot \"%s\" \n\n", word);
 
     }
 }
@@ -106,9 +128,9 @@ void deleteDictionaryMenu(){
     printf("Saisissez le chemin du dictionnaire que vous voulez effacer\n");
     scanf("%s", path);
     if(remove(path) == 0) {
-        printf("Le dictionnaire a bien été effacé");
+        printf("Le dictionnaire a bien été effacé\n\n");
     } else {
-        printf("La suppression du dictionnaire a échoué");
+        printf("La suppression du dictionnaire a échoué\n\n");
     }
     
 }

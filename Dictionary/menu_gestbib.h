@@ -1,24 +1,24 @@
 //
-//  Menu.h
+//  menu_gestbib.h
 //  Dictionary
 //
 //  Created by Candice on 27/11/2016.
 //  Copyright © 2016 Candice. All rights reserved.
 //
 
-#ifndef Menu_h
-#define Menu_h
+#ifndef menu_gestbib_h
+#define menu_gestbib_h
 
 #include <stdio.h>
 #include "LinkedList.h"
 #include "LinkedListFileHandler.h"
 
 
-void displayHomeMenu();
+void displayHomeMenuGestBib();
 
 void createDictionaryMenu();
 
-void chooseDictionaryMenu();
+LinkedList* chooseDictionaryMenu();
 
 void buildDictionaryMenu();
 
@@ -29,4 +29,4 @@ void searchInDictionaryMenu();
 void deleteDictionaryMenu();
 
 
-#endif /* Menu_h */
+#endif /* menu_gestbib_h */
