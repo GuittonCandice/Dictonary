@@ -1,15 +1,16 @@
 //
 //  main.c
-//  Dictionary3
+//  Dictionary4
 //
-//  Created by Candice on 04/12/2016.
+//  Created by Candice on 11/12/2016.
 //  Copyright © 2016 Candice. All rights reserved.
 //
 
-#include <stdio.h>
+#include "gestexpr.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+   
+    displayHomeMenuGestExpr();
+    
     return 0;
 }
