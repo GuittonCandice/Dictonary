@@ -14,6 +14,7 @@
 		325B05321DFE060700E5751B /* menu_gestbib.c in Sources */ = {isa = PBXBuildFile; fileRef = 32C7DBDF1DEB869D00AB5A98 /* menu_gestbib.c */; };
 		325B05331DFE06F200E5751B /* LinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 328DE42C1DF4A83E0083A4E7 /* LinkedList.c */; };
 		325B05341DFE070D00E5751B /* LinkedListFileHandler.c in Sources */ = {isa = PBXBuildFile; fileRef = 328DE42E1DF4A83E0083A4E7 /* LinkedListFileHandler.c */; };
+		325ED1A21E00AEE200322D73 /* menu_gestrech.c in Sources */ = {isa = PBXBuildFile; fileRef = 328DE4371DF4A8550083A4E7 /* menu_gestrech.c */; };
 		328DE40D1DF472DE0083A4E7 /* gestbib.c in Sources */ = {isa = PBXBuildFile; fileRef = 328DE40B1DF472DE0083A4E7 /* gestbib.c */; };
 		328DE4301DF4A83E0083A4E7 /* LinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 328DE42C1DF4A83E0083A4E7 /* LinkedList.c */; };
 		328DE4311DF4A83E0083A4E7 /* LinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 328DE42C1DF4A83E0083A4E7 /* LinkedList.c */; };
@@ -367,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				328DE44F1DF4D2140083A4E7 /* LinkedList.c in Sources */,
+				325ED1A21E00AEE200322D73 /* menu_gestrech.c in Sources */,
 				328DE44C1DF4D1F90083A4E7 /* gestrech.c in Sources */,
 				328DE4521DF4D4790083A4E7 /* gestorth.c in Sources */,
 				328DE44E1DF4D2110083A4E7 /* LinkedListFileHandler.c in Sources */,
@@ -544,6 +546,7 @@
 				325B05291DFDFFB800E5751B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		328DE4211DF47CB90083A4E7 /* Build configuration list for PBXNativeTarget "Dictionary2" */ = {
 			isa = XCConfigurationList;

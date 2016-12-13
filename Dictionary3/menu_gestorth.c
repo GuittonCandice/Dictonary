@@ -24,7 +24,13 @@ void displayHomeMenuGestOrth() {
                 verifyFile(ll, path);
             }
                 break;
-            case 2:
+            case 2:{
+                char path[255];
+                printf("Saisissez le chemin du fichier texte que vous voulez utiliser\n");
+                scanf("%s", path);
+                LinkedList* ll = chooseDictionaryMenu();
+                closeWord(ll, path);
+            }
                 break;
             case 3:
                 buildCorrectedFile();
@@ -56,12 +62,43 @@ void verifyFile(LinkedList* ll, char* path) {
             index++;
         }
     }
+}
+
+void closeWord(LinkedList* ll, char* path) {
+    FILE* file = fopen(path, "r");
+    char word[255];
+    char c;
+    int index = 0;
     
-    
+    while((c = fgetc(file)) != EOF){
+        if(c == '\n'){
+        }else if(c == ' '){
+            word[index] = '\0';
+            index = 0;
+            if((LinkedListContains(ll, word)) == 0){
+                LinkedList* res = seekSimilarWord(ll, word, 2);
+                if (res == NULL) {
+                    printf("Pas de mot similaire pour %s", word);
+                } else {
+                    printf("Mots proches de %s sont : \n", word);
+                    LinkedListPrint(res);
+                   
+                }
+                 printf("\n");
+            }
+        }else {
+            word[index] = c;
+            index++;
+        }
+    }
+
 }
 
 FILE* buildCorrectedFile() {
     FILE* f;
+    
+    
+    
     return f;
 }
 

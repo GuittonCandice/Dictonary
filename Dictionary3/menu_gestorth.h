@@ -11,13 +11,15 @@
 
 #include <stdio.h>
 #include "gestbib.h"
-
+#include "gestrech.h"
 void displayHomeMenuGestOrth();
 
 
 void verifyFile(LinkedList* ll, char* path);
 
 void verifyDictionaryWordsMenu();
+
+void closeWord(LinkedList* ll, char* path);
 
 FILE* buildCorrectedFile();
 #endif /* menu_gestorth_h */
