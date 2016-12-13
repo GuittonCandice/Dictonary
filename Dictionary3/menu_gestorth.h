@@ -10,13 +10,14 @@
 #define menu_gestorth_h
 
 #include <stdio.h>
-
+#include "gestbib.h"
 
 void displayHomeMenuGestOrth();
 
 
-void verifyDictionaryMenu(int choice);
+void verifyFile(LinkedList* ll, char* path);
 
+void verifyDictionaryWordsMenu();
 
 FILE* buildCorrectedFile();
 #endif /* menu_gestorth_h */
