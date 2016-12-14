@@ -36,12 +36,15 @@ int isChar(char c) {
 }
 
 LinkedList* LinkedListReadFromFile(char* path) {
-    FILE* file = fopen(path, "r");
+    FILE* f = fopen(path, "a");
     
+    fputs(" ", f);
+    fseek(f, 0, SEEK_SET);
+    fclose(f);
+    FILE* file = fopen(path, "r");
     if(file == NULL) {
         return 0;
     }
-    
     LinkedList* ll = NULL;
     char buffer[255];
     char c;

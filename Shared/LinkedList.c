@@ -74,6 +74,7 @@ int LinkedListContains(LinkedList* head, char* word){
             return 0;
         }
         head = head->next;
+        
     }
     return 0;
 }
