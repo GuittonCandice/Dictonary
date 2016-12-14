@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "menu_gestbib.h"
+#include "gestexpr.h"
 
 
 void displayHomeMenuGestExpr();
